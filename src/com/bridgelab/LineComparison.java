@@ -2,14 +2,33 @@ package com.bridgelab;
 
 import java.util.Scanner;
 
+/*********************************************************************
+ * @author mihir
+ * 
+ * As per user input calculating difference between two lines.
+ * as if they both are equal, first one is greater than the second one
+ * or first one is smaller than the second one.
+ *********************************************************************/
+
 public class LineComparison
 {	
+	float x1=0, x2=0, y1=0, y2=0, a1=0, a2=0, b1=0, b2=0;
 	static Scanner scanner = new Scanner(System.in);
 	
-	public static void main(String[] args)
+	/**
+	 * Name : compareTo
+	 * 
+	 * Description : Checking if both the line are equal, grater than or smaller than the other one.
+	 * 
+	 * Algorithm : Accepting starting point and ending points for both the lines from a user.
+	 * with the help of math.sqrt() function calculating length of the lines.
+	 * Comparing the length of the lines with the help of compare() function to check if equal,
+	 * smaller or greater.
+	 * 
+	 * Modification : Last commit 27-June-2021
+	 */
+	public void compareTo()
 	{
-		float x1=0, x2=0, y1=0, y2=0, a1=0, a2=0, b1=0, b2=0;
-		
 		System.out.print("Enter the value of a point x1: "); 
 		x1 = scanner.nextFloat();
 		System.out.print("Enter the value of a point y1: "); 
@@ -48,5 +67,11 @@ public class LineComparison
 		{
 			System.out.println("The first line is smaller than the second line.");
 		}
+	}
+	
+	public static void main(String[] args)
+	{
+		LineComparison lineComparisonObject = new LineComparison();
+		lineComparisonObject.compareTo();
 	}
 }
